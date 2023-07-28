@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EmptyTableComponent } from './empty-table/empty-table.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmptyTableComponent
     
   ],
   imports: [
