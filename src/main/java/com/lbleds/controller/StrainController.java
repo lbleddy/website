@@ -25,7 +25,7 @@ public class StrainController {
     @Autowired
     private StrainRepository strainRepository;
 
-    @GetMapping("")
+    @GetMapping("/")
     public void getStrainsDefault(){
 
     }
