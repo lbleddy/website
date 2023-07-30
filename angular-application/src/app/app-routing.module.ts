@@ -4,10 +4,10 @@ import { AppComponent } from './app.component';
 import { EmptyTableComponent } from './empty-table/empty-table.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'empty', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home', component: AppComponent },
-  { path: 'empty', component: EmptyTableComponent }
+  { path: 'strains', component: EmptyTableComponent }
 ];
 
 @NgModule({

@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class ChartService {
 
   constructor(private http:HttpClient) { }
-  get(): Observable<any> {
-    return this.http.get('http://localhost:8080/strains');
+  getStrains(): Observable<any> {
+    return this.http.get('http://localhost:8080/strain');
   }
   
   private handleError<T>(operation = 'operation' ,

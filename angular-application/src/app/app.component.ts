@@ -26,7 +26,7 @@ export class AppComponent {
   
 }
   getData(): void {
-    this.chartService.get().subscribe(data => {
+    this.chartService.getStrains().subscribe(data => {
       this.strains = data;
     });
 }
