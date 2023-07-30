@@ -15,6 +15,16 @@ public class Strain {
     private  String sativa_percentage="50";
     private String indica_percentage = "50";
 
+    private Integer thc_percentage = 20;
+
+    public int getThc_percentage() {
+        return thc_percentage;
+    }
+
+    public void setThc_percentage(int thc_percentage) {
+        this.thc_percentage = thc_percentage;
+    }
+
     public Strain(long id, String name, String sativa_percentage, String indica_percentage) {
         this.id = id;
         this.name = name;
@@ -26,6 +36,21 @@ public class Strain {
         this.name = name;
         this.sativa_percentage = sativa_percentage;
         this.indica_percentage = indica_percentage;
+    }
+
+    public Strain(long id, String name, String sativa_percentage, String indica_percentage, int thc_percentage) {
+        this.id = id;
+        this.name = name;
+        this.sativa_percentage = sativa_percentage;
+        this.indica_percentage = indica_percentage;
+        this.thc_percentage = thc_percentage;
+    }
+
+    public Strain(String name, String sativa_percentage, String indica_percentage, int thc_percentage) {
+        this.name = name;
+        this.sativa_percentage = sativa_percentage;
+        this.indica_percentage = indica_percentage;
+        this.thc_percentage = thc_percentage;
     }
 
     public Strain() {
@@ -58,6 +83,7 @@ public class Strain {
                 ", name='" + name + '\'' +
                 ", sativa_percentage='" + sativa_percentage + '\'' +
                 ", indica_percentage='" + indica_percentage + '\'' +
+                ", thc_percentage=" + thc_percentage +
                 '}';
     }
 }

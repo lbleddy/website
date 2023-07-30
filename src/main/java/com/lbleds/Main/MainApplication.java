@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 @SpringBootApplication
@@ -21,6 +22,7 @@ public class MainApplication {
 
 	@Autowired
 	private StrainRepository strainRepository;
+	private static long ID_GENERATOR = (new AtomicInteger(1000)).longValue();
 
 
 	public static void main(String[] args) {
@@ -38,14 +40,15 @@ public class MainApplication {
 //	}
 	@Bean
 	CommandLineRunner init(){
+
 		return args -> {
 			Stream.of("Northeast","Purple Haze","Orange","Kyoto","Hypothetical" +
 					"").forEach(name -> {
-						Strain strain = new Strain(name,"50","50");
+						Strain strain = new Strain(ID_GENERATOR,name,"50","50",19);
 						strainRepository.save(strain);
 			});
 			for (Strain strain : strainRepository.findAll()) {
-				//System.out.println(strain);
+				System.out.println(strain);
 			}
 		};
 	}

@@ -30,7 +30,7 @@ public class StrainController {
 
     }
 
-    @GetMapping("/strains")
+    @GetMapping("/strain")
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Strain> getStrains(){
         return (List<Strain>) strainRepository.findAll();
